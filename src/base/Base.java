@@ -18,7 +18,7 @@ import bean.Livre2;
 public class Base {
 
 	String config = "config"; // fichier config.properties
-	
+	// modification
 	String url = null;
 	String user = null;
 	String password = null;
