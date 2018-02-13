@@ -21,6 +21,7 @@ public class ConnectMongo {
 		System.out.println("DB connected ");
 		System.out.println(db.getName());
 		MongoCollection<Document> col = db.getCollection("oeuvres");
+		MongoCollection<Document> col2 = db.getCollection("coordonnesVilles");
 
 
 		try (MongoCursor<Document> cur = col.find().iterator()) {
