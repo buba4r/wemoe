@@ -8,5 +8,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/Volumes/LAST_KING/Driver/bson-3.6.1.jar"/>
+	<classpathentry kind="lib" path="/Volumes/LAST_KING/Driver/mongodb-driver-3.6.1.jar"/>
+	<classpathentry kind="lib" path="/Volumes/LAST_KING/Driver/mongodb-driver-core-3.6.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
