@@ -62,7 +62,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <h1>We <span class="brand-heading">Moe</span></h1>
+          <h1>We <span class="brand-heading">Moë</span></h1>
           <p class="intro-text">A full-service digital agency that loves what we do</p>
           <a href="#about" class="btn btn-default page-scroll">Learn More</a> </div>
       </div>
