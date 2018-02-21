@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Modus</title>
+<title>We Moë</title>
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -36,7 +36,7 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
-      <a class="navbar-brand page-scroll" href="#page-top"> <i class="fa fa-paper-plane-o"></i> Modus</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top"> <i class="fa fa-paper-plane-o"></i> We Moë</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -47,7 +47,7 @@
         <li> <a class="page-scroll" href="#services">Services</a> </li>
         <li> <a class="page-scroll" href="#works">Portfolio</a> </li>
         <li> <a class="page-scroll" href="#team">Team</a> </li>
-        <li> <a class="page-scroll" href="#testimonials">Testimonials</a> </li>
+        <li> <a class="page-scroll" href="#testimonials">IDENTIFICATION</a> </li>
         <li> <a class="page-scroll" href="#contact">Contact</a> </li>
       </ul>
     </div>
@@ -315,14 +315,17 @@
     </div>
   </div>
 </div>
-<!-- Testimonials Section -->
+
+
+<!-- Identification Section -->
 <div id="testimonials" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2>What our clients say</h2>
+      <h2>inscription ou connexion</h2>
       <hr>
     </div>
-    <div class="row">
+    
+  	<div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="row testimonials">
           <div class="col-sm-4">
@@ -345,18 +348,23 @@
           </div>
           <div class="col-sm-4">
             <blockquote><i class="fa fa-quote-left"></i>
+            
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitduis sed dapibus leo nec ornare.</p>
               <div class="clients-name">
                 <p><strong>Chris Smith</strong><br>
                   <em>CEO, Company Inc.</em></p>
               </div>
             </blockquote>
+          
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
 
 <!-- Contact Section -->
 <div id="contact" class="text-center">
