@@ -8,6 +8,8 @@ import annotation.Id;
 import annotation.Table;
 import bean.Livre;
 import bean.Livre2;
+import bean.Personne;
+import bean.Personne2;
 
 public class BaseAvecEnregistrer extends Base {
 
@@ -73,12 +75,12 @@ public static void main(String [] args) {
 	base.ouvrir();
 	
 	
-	Livre2 l2 = new Livre2("jdbc2","bbb",2019);
-	base.enregistrer(l2);
+	//Personne2 p2 = new Personne2("jdbc2","bbb",2019);
+	//base.enregistrer(l2);
 	
-	ArrayList<Livre> res = base.listerLivres();
-	for (Livre livre : res) {
-		System.out.println("livre "+livre.getTitre());
+	ArrayList<Personne> res = base.listerPersonne();
+	for (Personne personne : res) {
+		System.out.println("livre "+personne.getPer_nom());
 	}
 	
 	base.fermer();

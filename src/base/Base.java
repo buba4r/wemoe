@@ -14,6 +14,8 @@ import annotation.Id;
 import annotation.Table;
 import bean.Livre;
 import bean.Livre2;
+import bean.Personne;
+
 
 public class Base {
 
@@ -50,43 +52,46 @@ public class Base {
 		if (co != null) try {co.close();}catch (Exception e) {}
 	}
 	
-	public int enregistrerLivre(Livre l) {
+	public int enregistrerPersonnes(Personne p) {
 		int res = 0;
 		
 		try {
-			String sql = "insert into t_livre (titre, auteur, annee)"+
-					"values (?, ?, ?) ";
+			String sql = "insert into t_personnes_per (per_nom, per_prenom, per_mail, per_statut)"+
+					"values (?, ?, ?, ?) ";
 			PreparedStatement ps = co.prepareStatement(sql);
-			ps.setString(1,  l.getTitre());
-			ps.setString(2,  l.getAuteur());
-			ps.setInt(3,  l.getAnnee());
+			ps.setString(1, p.getPer_nom());
+			ps.setString(2,  p.getPer_prenom());
+			ps.setString(3,  p.getPer_mail());
+			ps.setBoolean(4, p.getPer_statut());
+			
 			res = ps.executeUpdate();
 			System.out.println("Exec sql : "+sql);
 		}
 		catch (Exception e) {
-			System.out.println("Erreur Base.enregistrerLivre "+e.getMessage());
+			System.out.println("Erreur Base.enregistrerPersonne "+e.getMessage());
 		}
 		return res;
 	}
 	
-	public ArrayList<Livre> listerLivres() {
-		ArrayList<Livre> lst = new ArrayList<>();
+	public ArrayList<Personne> listerPersonne() {
+		ArrayList<Personne> lst = new ArrayList<>();
 		try {
-			String sql = "select * from t_livre";
+			String sql = "select * from t_Personnes_per";
 			PreparedStatement ps = co.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				Livre l = new Livre();
-				l.setTitre(rs.getString("titre"));
-				l.setAuteur(rs.getString("auteur"));
-				l.setAnnee(rs.getInt("annee"));
-				lst.add(l);
+				Personne p = new Personne();
+				p.setPer_nom(rs.getString("per_nom"));
+				p.setPer_prenom(rs.getString("per_prenom"));
+				p.setPer_mail(rs.getString("per_mail"));
+				p.setPer_statut(rs.getBoolean("per_statut"));
+				lst.add(p);
 			}
 			System.out.println("Exec sql : "+sql);
 
 		}
 		catch (Exception e) {
-			System.out.println("Erreur Base.listerLivres "+e.getMessage());
+			System.out.println("Erreur Base.listerPersonnes "+e.getMessage());
 		}
 		return lst;
 	}
@@ -96,12 +101,13 @@ public class Base {
 		Base base = new Base();
 		base.ouvrir();
 		
-		Livre l = new Livre("jdbc","aaa",2018);
-		base.enregistrerLivre(l);
+		Personne p = new Personne("creignou", "jeremy","creignou.jeremy@gmail.com",false);
+		base.enregistrerPersonnes(p);
 		
-		ArrayList<Livre> res = base.listerLivres();
-		for (Livre livre : res) {
-			System.out.println("livre "+livre.getTitre());
+		
+		ArrayList<Personne> res = base.listerPersonne();
+		for (Personne personne : res) {
+			System.out.println("Personne "+personne.getPer_nom());
 		}
 		
 		base.fermer();
