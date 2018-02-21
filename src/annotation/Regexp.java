@@ -9,5 +9,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Id{
+public @interface Regexp{
+	String expr();
+	String value();
 }

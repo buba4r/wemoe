@@ -10,10 +10,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import annotation.Id;
-import annotation.Table;
 import bean.Livre;
-import bean.Livre2;
+
 import bean.Personne;
 
 
